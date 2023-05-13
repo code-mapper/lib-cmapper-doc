@@ -18,22 +18,17 @@ nav:
             - File List:
                 - Graph :
                     - graph.c : ./Files/File_List/graph/graph_8c.md
-                    - graph.h : ./Files/File_List/graph/graph_8h.md
 
                 - Linked List :
                     - linked_list.c : ./Files/File_List/linked_list/linked_list_8c.md
-                    - linked_list.h : ./Files/File_List/linked_list/linked_list_8h.md
 
                 - Queue :
                     - queue.c : ./Files/File_List/queue/queue_8c.md
-                    - queue.h : ./Files/File_List/queue/queue_8h.md
 
                 - Tables : 
                     - table.c : ./Files/File_List/table/table_8c.md  
-                    - table.h : ./Files/File_List/table/table_8h.md
 
                 - Tree : 
                     - tree.c : ./Files/File_List/tree/tree_8c.md
-                    - tree.h : ./Files/File_List/tree/tree_8h.md
 
 theme: readthedocs

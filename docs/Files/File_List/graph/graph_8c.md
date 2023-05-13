@@ -7,16 +7,49 @@
 #include "../queue/queue.h"
 ```
 
-## Functions
+## Data Structures
 ---
 ```
-Node * createNode (int v)
-Graph * createGraph (int vertices)
-void addEdge (Graph *g, int s, int d)
-void printGraph (Graph *g)
-void free_graph (Graph *g)
-void DFS (Graph *graph, int vertex)
-void BFS (Graph *graph, int startVertex)
+struct NODE
+struct GRAPH
+```
+
+## Type Definitions
+---
+```
+typedef struct NODE Node
+typedef struct GRAPH Graph
+```
+
+## Code Source
+---
+```
+#ifndef GRAPH_H_
+#define GRAPH_H_
+ 
+ 
+typedef struct NODE {
+    int vertex;
+    struct NODE* next;
+}Node;
+//struct node* createNode(int v);
+ 
+typedef struct GRAPH {
+    int numVertices;
+    int *visited;
+    struct NODE** adj;
+}Graph;
+ 
+ 
+Node* createNode(int v);
+Graph* createGraph(int vertices);
+void addEdge(Graph* graph, int s, int d);
+void printGraph(Graph* graph);
+void free_graph(Graph* graph);
+void DFS(Graph* graph, int vertex);
+void BFS(Graph* graph, int startVertex);
+ 
+#endif
 ```
 
 ## Function Documentation
