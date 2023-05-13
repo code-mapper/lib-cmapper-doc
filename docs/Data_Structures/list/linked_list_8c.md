@@ -1,23 +1,23 @@
-# linked_list.c File Reference
+## linked_list.c File Reference
 ---
 ```
 #include <stdlib.h>
 #include "list.h"
 ```
 
-## Data Structures
+### Data Structures
 ---
 ```
 struct list
 ```
 
-## Type Definitions
+### Type Definitions
 ---
 ```
 typedef struct list List
 ```
 
-## Code Source
+### Code Source
 ---
 ```
 #ifndef _LIST_H_
@@ -74,10 +74,9 @@ void list_rev(struct list *list);
 #endif
 ```
 
-
-## Function Documentation
+### Function Documentation
 ---
-### ◆ list_find()
+#### ◆ list_find()
 ```
 // Trouve un élément dans la liste chainée
 // Prend en paramètre un pointeur sur la liste et la valeur à trouver
@@ -85,7 +84,7 @@ void list_rev(struct list *list);
 >> struct list* list_find (struct list * list, int value)
 ```
 
-### ◆ list_init()
+#### ◆ list_init()
 ```
 // Initialise la liste chainée
 // Prend en paramètre un pointeur sur la liste
@@ -93,7 +92,7 @@ void list_rev(struct list *list);
 >> void list_init (struct list * list)
 ```
 
-### ◆ list_insert()
+#### ◆ list_insert()
 ```
 // Insérer un élément dans la liste
 // Prend en paramètre un pointeur sur la liste et un pointeur sur l'élément à insérer
@@ -101,7 +100,7 @@ void list_rev(struct list *list);
 >> void list_insert (struct list * list, struct list * elm)
 ```
 
-### ◆ list_is_empty()
+#### ◆ list_is_empty()
 ```
 // Vérifier si la liste est vide
 // Prend en paramètre un pointeur sur la liste
@@ -109,7 +108,7 @@ void list_rev(struct list *list);
 >> int list_is_empty (struct list * list)
 ```
 
-### ◆ list_is_sorted()
+#### ◆ list_is_sorted()
 ```
 // Vérifier si la liste est triée
 // Prend en paramètre un pointeur sur la liste
@@ -117,7 +116,7 @@ void list_rev(struct list *list);
 >> int list_is_sorted (struct list * list)
 ```
 
-### ◆ list_len()
+#### ◆ list_len()
 ```
 // Calculer la longueur de la liste
 // Prend en paramètre un pointeur sur la liste
@@ -125,7 +124,7 @@ void list_rev(struct list *list);
 >> size_t list_len (struct list * list)
 ```
 
-### ◆ list_pop_front()
+#### ◆ list_pop_front()
 ```
 // Supprimer un élément au début de la liste
 // Prend en paramètre un pointeur sur la liste
@@ -133,7 +132,7 @@ void list_rev(struct list *list);
 >> struct list* list_pop_front (struct list * list)
 ```
 
-### ◆ list_push_front()
+#### ◆ list_push_front()
 ```
 // Ajouter un élément au début de la liste
 // Prend en paramètre un pointeur sur la liste et un pointeur sur l'élément à ajouter
@@ -141,7 +140,7 @@ void list_rev(struct list *list);
 >> void list_push_front (struct list * list, struct list * elm)
 ```
 
-### ◆ list_rev()
+#### ◆ list_rev()
 ```
 // Inverser la liste
 // Prend en paramètre un pointeur sur la liste

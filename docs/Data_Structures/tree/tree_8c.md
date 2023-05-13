@@ -1,22 +1,22 @@
-# table.c File Reference
+## tree.c File Reference
 ---
 ```
 #include <tree.h>
 ```
 
-## Data Structures
+### Data Structures
 ---
 ```
 struct tree
 ```
 
-## Type Definitions
+### Type Definitions
 ---
 ```
 typedef struct tree Tree
 ```
 
-## Code Source
+### Code Source
 ---
 ```
 #ifndef TREE_H_
@@ -47,54 +47,54 @@ void prefix_print(struct tree* t);
 #endif
 ```
 
-## Function Documentation
+### Function Documentation
 ---
-### ◆ ajouter_noeud()
+#### ◆ ajouter_noeud()
 ```
 >> struct tree* ajouter_noeud (struct tree * racine, int valeur)
 ```
 
-### ◆ createTree()
+#### ◆ createTree()
 ```
 >> struct tree* createTree (int data)
 ```
 
-### ◆ free_tree()
+#### ◆ free_tree()
 ```
 >> void free_tree (struct tree * t)
 ```
 
-### ◆ infix_print()
+#### ◆ infix_print()
 ```
 >> void infix_print (struct tree * t)
 ```
 
-### ◆ max()
+#### ◆ max()
 ```
 >> size_t max (size_t a, size_t b)
 ```
 
-### ◆ minimum_dans_sous_arbre_droit()
+#### ◆ minimum_dans_sous_arbre_droit()
 ```
 >> struct tree* minimum_dans_sous_arbre_droit (struct tree * racine)
 ```
 
-### ◆ prefix_print()
+#### ◆ prefix_print()
 ```
 >> void prefix_print (struct tree * t)
 ```
 
-### ◆ supprimer_noeud()
+#### ◆ supprimer_noeud()
 ```
 >> struct tree* supprimer_noeud (struct tree * racine, int valeur)
 ```
 
-### ◆ tree_height()
+#### ◆ tree_height()
 ```
 >> size_t tree_height (struct tree * t)
 ```
 
-### ◆ tree_size()
+#### ◆ tree_size()
 ```
 >> size_t tree_size (struct tree * t)
 ```

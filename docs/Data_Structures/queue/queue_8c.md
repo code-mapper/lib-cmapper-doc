@@ -1,4 +1,4 @@
-# queue.c File Reference
+## queue.c File Reference
 ---
 ```
 #include <stdlib.h>
@@ -6,19 +6,19 @@
 #include "queue.h"
 ```
 
-## Data Structures
+### Data Structures
 ---
 ```
 struct QUEUE
 ```
 
-## Type Definitions
+### Type Definitions
 ---
 ```
 typedef struct QUEUE Queue
 ```
 
-## Code Source
+### Code Source
 ---
 ```
 #ifndef QUEUE_H_
@@ -45,34 +45,34 @@ void printQueue(Queue* q);
 #endif
 ```
 
-## Function Documentation
+### Function Documentation
 ---
-### ◆ createFillQueue()
+#### ◆ createFillQueue()
 ```
 >> Queue* createFillQueue (int n)
 ```
 
-### ◆ createQueue()
+#### ◆ createQueue()
 ```
 >> Queue* createQueue ()
 ```
 
-### ◆ dequeue()
+#### ◆ dequeue()
 ```
 >> int dequeue (Queue * q)
 ```
 
-### ◆ enqueue()
+#### ◆ enqueue()
 ```
 >> void enqueue (Queue * q, int value)
 ```
 
-### ◆ isEmpty()
+#### ◆ isEmpty()
 ```
 >> int isEmpty (Queue * q)
 ```
 
-### ◆ printQueue()
+#### ◆ printQueue()
 ```
 >> void printQueue (Queue * q)
 ```

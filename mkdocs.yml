@@ -5,30 +5,21 @@ nav:
     - About: about.md
     - lib-cmapper:
         - Data_Structures: 
-            - Data_Structure:
-                - Graph : ./Data_Structures/Data_Structure/graph/graph.md
-                - List : ./Data_Structures/Data_Structure/list/list.md
-                - Node : ./Data_Structures/Data_Structure/node/node.md
-                - Queue : ./Data_Structures/Data_Structure/queue/queue.md
-                - Tree : ./Data_Structures/Data_Structure/tree/tree.md
-
-            - Data_Field : ./Data_Structures/datafield.md
-
-        - Files:
-            - File List:
-                - Graph :
-                    - graph.c : ./Files/File_List/graph/graph_8c.md
-
-                - Linked List :
-                    - linked_list.c : ./Files/File_List/linked_list/linked_list_8c.md
-
-                - Queue :
-                    - queue.c : ./Files/File_List/queue/queue_8c.md
-
-                - Tables : 
-                    - table.c : ./Files/File_List/table/table_8c.md  
-
-                - Tree : 
-                    - tree.c : ./Files/File_List/tree/tree_8c.md
-
-theme: readthedocs
+            - Node : ./Data_Structures/node/node.md
+            - Tables : 
+                - table.c : ./Data_Structures/table/table_8c.md
+            - Graph :
+                - Graph : ./Data_Structures/graph/graph.md
+                - graph.c : ./Data_Structures/graph/graph_8c.md
+            - Linked List :
+                - List : ./Data_Structures/list/list.md
+                - linked_list.c : ./Data_Structures/list/linked_list_8c.md
+            - Queue :
+                - Queue : ./Data_Structures/queue/queue.md
+                - queue.c : ./Data_Structures/queue/queue_8c.md
+            - Tree : 
+                - Tree : ./Data_Structures/tree/tree.md
+                - tree.c : ./Data_Structures/tree/tree_8c.md
+                
+            
+theme: flatly

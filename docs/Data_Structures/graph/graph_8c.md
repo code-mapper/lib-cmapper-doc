@@ -1,4 +1,4 @@
-# graph.c File Reference
+## graph.c File Reference
 ---
 ```
 #include <stdio.h>
@@ -7,21 +7,21 @@
 #include "../queue/queue.h"
 ```
 
-## Data Structures
+### Data Structures
 ---
 ```
 struct NODE
 struct GRAPH
 ```
 
-## Type Definitions
+### Type Definitions
 ---
 ```
 typedef struct NODE Node
 typedef struct GRAPH Graph
 ```
 
-## Code Source
+### Code Source
 ---
 ```
 #ifndef GRAPH_H_
@@ -52,39 +52,39 @@ void BFS(Graph* graph, int startVertex);
 #endif
 ```
 
-## Function Documentation
+### Function Documentation
 ---
-### ◆ addEdge()
+#### ◆ addEdge()
 ```	
->> - void addEdge (Graph * g, int s, int d)	
+>> void addEdge (Graph * g, int s, int d)	
 ```
 
-### ◆ BFS()
+#### ◆ BFS()
 ```
 >> void BFS (Graph * graph, int startVertex)	
 ```
 
-### ◆ createGraph()
+#### ◆ createGraph()
 ```
 >> Graph * createGraph (int vertices)	
 ```
 
-### ◆ createNode()
+#### ◆ createNode()
 ```
 >> Node * createNode (int v)
 ```
 
-### ◆ DFS()
+#### ◆ DFS()
 ```
 >> void DFS (Graph * graph, int vertex)
 ```
 
-### ◆ free_graph()
+#### ◆ free_graph()
 ```
 >> void free_graph (Graph * g)
 ```
 
-### ◆ printGraph()
+#### ◆ printGraph()
 ```
 >> void printGraph (Graph * g)
 ```

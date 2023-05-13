@@ -1,5 +1,4 @@
-# Titre
+## Documentation de `<lib-cmapper>`
 
-## Sous-titre
-
-Premiere ligne 
+Apprenez à utiliser la librairie **lib-cmapper** pour créer des programmes optimales. Parcourez des tutoriels, des exemples de code, des bases, des informations de 
+référence sur les **structures de données** et plus encore.
