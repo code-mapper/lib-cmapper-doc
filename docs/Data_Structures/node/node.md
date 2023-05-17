@@ -1,4 +1,4 @@
-## NODE Struct Reference
+## Documentation maillons
 ---
 
 ```

@@ -1,9 +1,34 @@
-## linked_list.c File Reference
+## Documentation listes chainées
 ---
 ```
 #include <stdlib.h>
 #include "list.h"
 ```
+
+## list Struct Reference
+---
+
+```
+#include <linked_list.h>
+```
+
+### Data Fields
+---
+```
+struct list * 	next
+int data
+```
+
+### Field Documentation
+---
+#### ◆ data
+```	
+>> int data
+```
+
+#### ◆ next
+```
+>> struct list* next
 
 ### Data Structures
 ---

@@ -1,9 +1,33 @@
-## queue.c File Reference
+## Documentation Files
 ---
 ```
 #include <stdlib.h>
 #include <stdio.h>
 #include "queue.h"
+```
+###  Data Fields
+---
+```
+int items [SIZE]
+int front
+int rear
+```
+
+###  Field Documentation
+---
+#### ◆ front
+```	
+>> int front
+```
+
+#### ◆ items
+```	
+>> int items[SIZE]
+```
+
+#### ◆ rear
+```
+>> int rear
 ```
 
 ### Data Structures

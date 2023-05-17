@@ -1,10 +1,33 @@
-## graph.c File Reference
+## Documentation pour les graphes
 ---
 ```
 #include <stdio.h>
 #include <stdlib.h>
 #include "graph.h"
 #include "../queue/queue.h"
+```
+
+### Data Fields
+---
+```
+int  numVertices
+int* visited
+struct NODE** adj
+```
+### Field Documentation
+---
+#### ◆ adj
+```
+>> struct NODE** adj
+```
+
+#### ◆ numVertices
+```
+>> int numVertices
+```
+#### ◆ visited
+```
+>> int* visited
 ```
 
 ### Data Structures
