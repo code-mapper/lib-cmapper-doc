@@ -1,4 +1,4 @@
-## Documentation pour les graphes
+## Documentation Graphes
 ---
 ```
 #include <stdio.h>
@@ -7,14 +7,14 @@
 #include "../queue/queue.h"
 ```
 
-### Data Fields
+### Definition du graphe
 ---
 ```
 int  numVertices
 int* visited
 struct NODE** adj
 ```
-### Field Documentation
+### Documentation des attributs
 ---
 #### ◆ adj
 ```
@@ -28,20 +28,6 @@ struct NODE** adj
 #### ◆ visited
 ```
 >> int* visited
-```
-
-### Data Structures
----
-```
-struct NODE
-struct GRAPH
-```
-
-### Type Definitions
----
-```
-typedef struct NODE Node
-typedef struct GRAPH Graph
 ```
 
 ### Code Source
@@ -75,7 +61,7 @@ void BFS(Graph* graph, int startVertex);
 #endif
 ```
 
-### Function Documentation
+### Documentation des fonctions
 ---
 #### ◆ addEdge()
 ```	

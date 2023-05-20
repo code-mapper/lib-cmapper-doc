@@ -4,7 +4,7 @@ nav:
     - Home: index.md
     - About: about.md
     - Structure de données:
-        - Node : ./Data_Structures/node/node.md
+        - Noeux : ./Data_Structures/node/node.md
         - Tableaux : ./Data_Structures/table/table_8c.md
         - Graphes : ./Data_Structures/graph/graph_8c.md
         - Listes chainées : ./Data_Structures/list/linked_list_8c.md

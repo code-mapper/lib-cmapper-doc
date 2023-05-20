@@ -4,7 +4,10 @@
 #include <tree.h>
 ```
 
-###  Data Fields
+### Qu'est ce qu'un arbre ?
+Un arbre est une structure de données non linéaire qui permet de stocker des éléments de façon hiérarchique. Un arbre est composé d'un noeud racine et de sous-arbres. Chaque sous-arbre est lui-même un arbre. Un arbre est composé de noeuds. Chaque noeud est composé d'une valeur et de deux pointeurs vers les sous-arbres gauche et droit.
+
+###  Definition d'un arbre
 ---
 ```
 int value
@@ -12,13 +15,12 @@ struct tree * left
 struct tree * right
 ```
 
-###  Field Documentation
+###  Documentation des attributs
 ---
 #### ◆ left
 ```	
 >> struct tree * left
 ```
-<br>
 #### ◆ right
 ```
 >> struct tree * right
@@ -72,7 +74,7 @@ void prefix_print(struct tree* t);
 #endif
 ```
 
-### Function Documentation
+### Documentation des fonctions
 ---
 #### ◆ ajouter_noeud()
 ```

@@ -5,7 +5,11 @@
 #include <stdio.h>
 #include "queue.h"
 ```
-###  Data Fields
+
+### Qu'est ce qu'une file ?
+Une file est une structure de données qui permet de stocker des éléments de façon ordonnée. Les éléments sont ajoutés à la fin de la file et retirés au début de la file. On parle de structure de données FIFO (First In First Out) ou PEPS (Premier Entré Premier Sorti).
+
+###  Definition de la file
 ---
 ```
 int items [SIZE]
@@ -13,7 +17,7 @@ int front
 int rear
 ```
 
-###  Field Documentation
+###  Definition des attributs
 ---
 #### ◆ front
 ```	
@@ -69,7 +73,7 @@ void printQueue(Queue* q);
 #endif
 ```
 
-### Function Documentation
+### Definition des fonctions
 ---
 #### ◆ createFillQueue()
 ```

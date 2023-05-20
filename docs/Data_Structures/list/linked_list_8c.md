@@ -5,6 +5,9 @@
 #include "list.h"
 ```
 
+### Qu'est ce qu'une liste chainée ?
+Une liste chainée est une structure de données composée de plusieurs éléments appelés noeux chaînés entre eux. Chaque élément (nœud) de la liste est fourni avec deux champs, appelés liens, qui sont les références au nœud précédent et suivant dans la séquence de nœuds. Cette structure permet l'insertion ou la suppression d'un nœud sans avoir à déplacer les nœuds adjacents, contrairement aux tableaux.
+
 ## list Struct Reference
 ---
 
@@ -12,14 +15,14 @@
 #include <linked_list.h>
 ```
 
-### Data Fields
+### Definition de la liste chainée
 ---
 ```
-struct list * 	next
+struct list *next
 int data
 ```
 
-### Field Documentation
+### Documentation des attributs
 ---
 #### ◆ data
 ```	
@@ -28,9 +31,10 @@ int data
 
 #### ◆ next
 ```
->> struct list* next
-
+>> struct list * next
+```
 ### Data Structures
+
 ---
 ```
 struct list
@@ -99,7 +103,7 @@ void list_rev(struct list *list);
 #endif
 ```
 
-### Function Documentation
+### Documentation des fonctions
 ---
 #### ◆ list_find()
 ```
