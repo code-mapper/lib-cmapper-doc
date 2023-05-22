@@ -1,5 +1,5 @@
 site_name: lib-cmapper
-site_url: https://codemapper.com/
+site_url: https://code-mapper.github.io/lib-cmapper-doc/
 nav:
     - Home: index.md
     - About: about.md
