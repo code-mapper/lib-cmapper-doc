@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://codemapper.com/Data_Structures/graph/graph_8c/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Graphes - lib-cmapper</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Graphes";
+        var mkdocs_page_input_path = "Data_Structures/graph/graph_8c.md";
+        var mkdocs_page_url = "/Data_Structures/graph/graph_8c/";
+      </script>
+    
+    <script src="../../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> lib-cmapper
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../about/">About</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Structure de données</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../node/node/">Noeux</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../table/table_8c/">Tableaux</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Graphes</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#definition-du-graphe">Definition du graphe</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#documentation-des-attributs">Documentation des attributs</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#adj">◆ adj</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#numvertices">◆ numVertices</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#visited">◆ visited</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#code-source">Code Source</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#documentation-des-fonctions">Documentation des fonctions</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#addedge">◆ addEdge()</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#bfs">◆ BFS()</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#creategraph">◆ createGraph()</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#createnode">◆ createNode()</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#dfs">◆ DFS()</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#free_graph">◆ free_graph()</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#printgraph">◆ printGraph()</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../list/linked_list_8c/">Listes chainées</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../queue/queue_8c/">Files</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tree/tree_8c/">Arbres</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">lib-cmapper</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+          <li>Structure de données &raquo;</li>
+      <li>Graphes</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="documentation-graphes">Documentation Graphes</h2>
+<hr />
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &quot;graph.h&quot;
+#include &quot;../queue/queue.h&quot;
+</code></pre>
+<h3 id="definition-du-graphe">Definition du graphe</h3>
+<hr />
+<pre><code>int  numVertices
+int* visited
+struct NODE** adj
+</code></pre>
+<h3 id="documentation-des-attributs">Documentation des attributs</h3>
+<hr />
+<h4 id="adj">◆ adj</h4>
+<pre><code>&gt;&gt; struct NODE** adj
+</code></pre>
+<h4 id="numvertices">◆ numVertices</h4>
+<pre><code>&gt;&gt; int numVertices
+</code></pre>
+<h4 id="visited">◆ visited</h4>
+<pre><code>&gt;&gt; int* visited
+</code></pre>
+<h3 id="code-source">Code Source</h3>
+<hr />
+<pre><code>#ifndef GRAPH_H_
+#define GRAPH_H_
+
+
+typedef struct NODE {
+    int vertex;
+    struct NODE* next;
+}Node;
+//struct node* createNode(int v);
+
+typedef struct GRAPH {
+    int numVertices;
+    int *visited;
+    struct NODE** adj;
+}Graph;
+
+
+Node* createNode(int v);
+Graph* createGraph(int vertices);
+void addEdge(Graph* graph, int s, int d);
+void printGraph(Graph* graph);
+void free_graph(Graph* graph);
+void DFS(Graph* graph, int vertex);
+void BFS(Graph* graph, int startVertex);
+
+#endif
+</code></pre>
+<h3 id="documentation-des-fonctions">Documentation des fonctions</h3>
+<hr />
+<h4 id="addedge">◆ addEdge()</h4>
+<pre><code>&gt;&gt; void addEdge (Graph * g, int s, int d)   
+</code></pre>
+<h4 id="bfs">◆ BFS()</h4>
+<pre><code>&gt;&gt; void BFS (Graph * graph, int startVertex)    
+</code></pre>
+<h4 id="creategraph">◆ createGraph()</h4>
+<pre><code>&gt;&gt; Graph * createGraph (int vertices)   
+</code></pre>
+<h4 id="createnode">◆ createNode()</h4>
+<pre><code>&gt;&gt; Node * createNode (int v)
+</code></pre>
+<h4 id="dfs">◆ DFS()</h4>
+<pre><code>&gt;&gt; void DFS (Graph * graph, int vertex)
+</code></pre>
+<h4 id="free_graph">◆ free_graph()</h4>
+<pre><code>&gt;&gt; void free_graph (Graph * g)
+</code></pre>
+<h4 id="printgraph">◆ printGraph()</h4>
+<pre><code>&gt;&gt; void printGraph (Graph * g)
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../table/table_8c/" class="btn btn-neutral float-left" title="Tableaux"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../list/linked_list_8c/" class="btn btn-neutral float-right" title="Listes chainées">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../table/table_8c/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../list/linked_list_8c/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme_extra.js" defer></script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="../../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

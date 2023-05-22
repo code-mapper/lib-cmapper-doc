@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://codemapper.com/Data_Structures/tree/tree_8c/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Arbres - lib-cmapper</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Arbres";
+        var mkdocs_page_input_path = "Data_Structures/tree/tree_8c.md";
+        var mkdocs_page_url = "/Data_Structures/tree/tree_8c/";
+      </script>
+    
+    <script src="../../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> lib-cmapper
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../about/">About</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Structure de données</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../node/node/">Noeux</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../table/table_8c/">Tableaux</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../graph/graph_8c/">Graphes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../list/linked_list_8c/">Listes chainées</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../queue/queue_8c/">Files</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Arbres</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#quest-ce-quun-arbre">Qu'est ce qu'un arbre ?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#definition-dun-arbre">Definition d'un arbre</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#documentation-des-attributs">Documentation des attributs</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#left">◆ left</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#right">◆ right</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#value">◆ value</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#data-structures">Data Structures</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#type-definitions">Type Definitions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#code-source">Code Source</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#documentation-des-fonctions">Documentation des fonctions</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#ajouter_noeud">◆ ajouter_noeud()</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#createtree">◆ createTree()</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#free_tree">◆ free_tree()</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#infix_print">◆ infix_print()</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#max">◆ max()</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#minimum_dans_sous_arbre_droit">◆ minimum_dans_sous_arbre_droit()</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#prefix_print">◆ prefix_print()</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#supprimer_noeud">◆ supprimer_noeud()</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#tree_height">◆ tree_height()</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#tree_size">◆ tree_size()</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">lib-cmapper</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+          <li>Structure de données &raquo;</li>
+      <li>Arbres</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="documentation-arbres">Documentation Arbres</h2>
+<hr />
+<pre><code>#include &lt;tree.h&gt;
+</code></pre>
+<h3 id="quest-ce-quun-arbre">Qu'est ce qu'un arbre ?</h3>
+<p>Un arbre est une structure de données non linéaire qui permet de stocker des éléments de façon hiérarchique. Un arbre est composé d'un noeud racine et de sous-arbres. Chaque sous-arbre est lui-même un arbre. Un arbre est composé de noeuds. Chaque noeud est composé d'une valeur et de deux pointeurs vers les sous-arbres gauche et droit.</p>
+<h3 id="definition-dun-arbre">Definition d'un arbre</h3>
+<hr />
+<pre><code>int value
+struct tree * left
+struct tree * right
+</code></pre>
+<h3 id="documentation-des-attributs">Documentation des attributs</h3>
+<hr />
+<h4 id="left">◆ left</h4>
+<pre><code>&gt;&gt; struct tree * left
+</code></pre>
+<h4 id="right">◆ right</h4>
+<pre><code>&gt;&gt; struct tree * right
+</code></pre>
+<h4 id="value">◆ value</h4>
+<pre><code>&gt;&gt; int value
+</code></pre>
+<h3 id="data-structures">Data Structures</h3>
+<hr />
+<pre><code>struct tree
+</code></pre>
+<h3 id="type-definitions">Type Definitions</h3>
+<hr />
+<pre><code>typedef struct tree Tree
+</code></pre>
+<h3 id="code-source">Code Source</h3>
+<hr />
+<pre><code>#ifndef TREE_H_
+#define TREE_H_
+
+
+#include &lt;stdlib.h&gt;
+#include &lt;stdio.h&gt;
+
+
+struct tree
+{
+    int value;
+    struct tree* left;
+    struct tree* right;
+};
+
+struct tree* createTree(int data);
+size_t tree_size (struct tree* t);
+size_t max (size_t a, size_t b);
+size_t tree_height (struct tree* t);
+void free_tree (struct tree* t);
+struct tree* ajouter_noeud(struct tree* racine, int valeur);
+struct tree* supprimer_noeud(struct tree* racine, int valeur);
+void prefix_print(struct tree* t);
+void infix_print(struct tree* t);
+void prefix_print(struct tree* t);
+#endif
+</code></pre>
+<h3 id="documentation-des-fonctions">Documentation des fonctions</h3>
+<hr />
+<h4 id="ajouter_noeud">◆ ajouter_noeud()</h4>
+<pre><code>&gt;&gt; struct tree* ajouter_noeud (struct tree * racine, int valeur)
+</code></pre>
+<h4 id="createtree">◆ createTree()</h4>
+<pre><code>&gt;&gt; struct tree* createTree (int data)
+</code></pre>
+<h4 id="free_tree">◆ free_tree()</h4>
+<pre><code>&gt;&gt; void free_tree (struct tree * t)
+</code></pre>
+<h4 id="infix_print">◆ infix_print()</h4>
+<pre><code>&gt;&gt; void infix_print (struct tree * t)
+</code></pre>
+<h4 id="max">◆ max()</h4>
+<pre><code>&gt;&gt; size_t max (size_t a, size_t b)
+</code></pre>
+<h4 id="minimum_dans_sous_arbre_droit">◆ minimum_dans_sous_arbre_droit()</h4>
+<pre><code>&gt;&gt; struct tree* minimum_dans_sous_arbre_droit (struct tree * racine)
+</code></pre>
+<h4 id="prefix_print">◆ prefix_print()</h4>
+<pre><code>&gt;&gt; void prefix_print (struct tree * t)
+</code></pre>
+<h4 id="supprimer_noeud">◆ supprimer_noeud()</h4>
+<pre><code>&gt;&gt; struct tree* supprimer_noeud (struct tree * racine, int valeur)
+</code></pre>
+<h4 id="tree_height">◆ tree_height()</h4>
+<pre><code>&gt;&gt; size_t tree_height (struct tree * t)
+</code></pre>
+<h4 id="tree_size">◆ tree_size()</h4>
+<pre><code>&gt;&gt; size_t tree_size (struct tree * t)
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../queue/queue_8c/" class="btn btn-neutral float-left" title="Files"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../queue/queue_8c/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme_extra.js" defer></script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="../../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
